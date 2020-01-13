@@ -36,6 +36,7 @@ under the License.
 
 	<modules>
 		<module>flink-tpcds</module>
+		<module>tpcds-gen</module>
 	</modules>
 
 </project>
