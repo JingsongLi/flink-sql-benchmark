@@ -83,10 +83,7 @@ public class GenTable extends Configured implements Tool {
     }
 
     int scale = Integer.parseInt(line.getOptionValue("scale"));
-    String table = "all";
-    if (line.hasOption("table")) {
-      table = line.getOptionValue("table");
-    }
+    String table = line.getOptionValue("table", "all");
     Path out = new Path(line.getOptionValue("dir"));
 
     int parallel = scale;
