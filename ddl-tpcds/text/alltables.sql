@@ -6,8 +6,8 @@ drop table if exists call_center;
 create external table call_center(
       cc_call_center_sk         bigint               
 ,     cc_call_center_id         string              
-,     cc_rec_start_date        string                         
-,     cc_rec_end_date          string                         
+,     cc_rec_start_date        date
+,     cc_rec_end_date          date
 ,     cc_closed_date_sk         bigint                       
 ,     cc_open_date_sk           bigint                       
 ,     cc_name                   string                   
@@ -216,7 +216,7 @@ create external table date_dim
 (
     d_date_sk                 bigint,
     d_date_id                 string,
-    d_date                    string,
+    d_date                    date,
     d_month_seq               int,
     d_week_seq                int,
     d_quarter_seq             int,
@@ -295,8 +295,8 @@ create external table item
 (
     i_item_sk                 bigint,
     i_item_id                 string,
-    i_rec_start_date          string,
-    i_rec_end_date            string,
+    i_rec_start_date          date,
+    i_rec_end_date            date,
     i_item_desc               string,
     i_current_price           double,
     i_wholesale_cost          double,
@@ -446,8 +446,8 @@ create external table store
 (
     s_store_sk                bigint,
     s_store_id                string,
-    s_rec_start_date          string,
-    s_rec_end_date            string,
+    s_rec_start_date          date,
+    s_rec_end_date            date,
     s_closed_date_sk          bigint,
     s_store_name              string,
     s_number_employees        int,
@@ -527,8 +527,8 @@ drop table if exists web_page;
 create external table web_page(
       wp_web_page_sk            bigint               
 ,     wp_web_page_id            string              
-,     wp_rec_start_date        string                         
-,     wp_rec_end_date          string                         
+,     wp_rec_start_date        date
+,     wp_rec_end_date          date
 ,     wp_creation_date_sk       bigint                       
 ,     wp_access_date_sk         bigint                       
 ,     wp_autogen_flag           string                       
@@ -629,8 +629,8 @@ create external table web_site
 (
     web_site_sk           bigint,
     web_site_id           string,
-    web_rec_start_date    string,
-    web_rec_end_date      string,
+    web_rec_start_date    date,
+    web_rec_end_date      date,
     web_name              string,
     web_open_date_sk      bigint,
     web_close_date_sk     bigint,
