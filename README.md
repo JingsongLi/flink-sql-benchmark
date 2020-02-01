@@ -38,11 +38,11 @@
   
   - Setup hadoop integration: [Hadoop environment](https://ci.apache.org/projects/flink/flink-docs-release-1.9/ops/deployment/hadoop.html).
   
-  - Setup flink cluster: [standalone cluster](https://ci.apache.org/projects/flink/flink-docs-master/ops/deployment/cluster_setup.html) or [Yarn session](https://ci.apache.org/projects/flink/flink-docs-master/ops/deployment/yarn_setup.html#flink-yarn-session).
+  - Setup flink cluster: [Standalone cluster](https://ci.apache.org/projects/flink/flink-docs-master/ops/deployment/cluster_setup.html) or [Yarn session](https://ci.apache.org/projects/flink/flink-docs-master/ops/deployment/yarn_setup.html#flink-yarn-session).
   
   - Recommended environment for 10T
     - 20 machines.
-    - Machine: 63 processors. 256GB memory. 1 SSD disk. Multi SATA disks.
+    - Machine: 64 processors. 256GB memory. 1 SSD disk for spill. Multi SATA disks for HDFS.
   
 - Step 2: Build test jar.
 
