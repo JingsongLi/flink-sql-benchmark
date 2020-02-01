@@ -32,7 +32,7 @@
 
 - Step 1: Prepare your flink environment.
 
-  - Prepare flink-conf.yaml: [Recommended Conf]().
+  - Prepare flink-conf.yaml: [Recommended Conf](https://github.com/JingsongLi/flink-sql-benchmark/blob/master/flink-conf.yaml).
 
   - Setup hive integration: [Hive dependencies](https://ci.apache.org/projects/flink/flink-docs-master/dev/table/hive/#dependencies).
   
@@ -40,7 +40,9 @@
   
   - Setup flink cluster: [standalone cluster](https://ci.apache.org/projects/flink/flink-docs-master/ops/deployment/cluster_setup.html) or [Yarn session](https://ci.apache.org/projects/flink/flink-docs-master/ops/deployment/yarn_setup.html#flink-yarn-session).
   
-  - Recommended environment for 10T: 20 machines. 63 processors. 1 SSD. Multi SATA.
+  - Recommended environment for 10T
+    - 20 machines.
+    - Machine: 63 processors. 256GB memory. 1 SSD disk. Multi SATA disks.
   
 ## Run benchmark in other systems
 
