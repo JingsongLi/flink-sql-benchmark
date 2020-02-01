@@ -44,6 +44,16 @@
     - 20 machines.
     - Machine: 63 processors. 256GB memory. 1 SSD disk. Multi SATA disks.
   
+- Step 2: Build test jar.
+
+  - Modify flink version and hive version of `pom.xml`.
+  
+  - `cd flink-tpcds`, `mvn clean install`
+  
+- Step 3: Run
+
+  - `flink_home/bin/flink run -c org.apache.flink.benchmark.Benchmark ./flink-tpcds-0.1-SNAPSHOT-jar-with-dependencies.jar --database tpcds_bin_orc_10000 --hive_conf hive_home/conf`
+  
 ## Run benchmark in other systems
 
 Because the prepared test data is standard hive data, other calculation frameworks integrated with hive data can also run benchmark very simply. Please build your own environment and test it.
